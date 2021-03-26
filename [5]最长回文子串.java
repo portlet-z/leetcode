@@ -46,38 +46,7 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public String longestPalindrome(String s) {
-        if (s == "") {
-            return "";
-        }
-        int start = 0;
-        int end = 0;
-        int j = 0;
-        char[] chars = s.toCharArray();
-        if (chars.length == 2 && chars[0] == chars[1]) {
-            return s;
-        }
-        for (int i = 1; i < chars.length; i++) {
-            if (chars[i] == chars[j]) {
-                if (i - j > end - start) {
-                    end = i;
-                    start = j;
-                }
-            }
-            if (i + 1 < chars.length && chars[i + 1] == chars[j]) {
-                if (i + 1 - j > end - start) {
-                    end = i + 1;
-                    start = j;
-                }
-            } else {
-                j++;
-            }
-
-        }
-        StringBuilder sb = new StringBuilder();
-        for (int i = start; i <= end; i++) {
-            sb.append(chars[i]);
-        }
-        return sb.toString();
+        
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
